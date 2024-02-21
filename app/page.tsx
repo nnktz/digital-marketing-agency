@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Navbar } from '@/components/navbar'
 import { Spotlight } from '@/components/ui/spotlight'
 import { SliderUI } from '@/components/ui/slider'
+import { WebsiteDesign } from '@/components/website-design'
 
 const HomePage = () => {
   return (
@@ -31,6 +32,7 @@ const HomePage = () => {
 
         <div className="w-full pt-20">
           <SliderUI />
+          <WebsiteDesign />
         </div>
       </div>
     </div>
