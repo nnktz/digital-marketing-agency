@@ -6,6 +6,7 @@ import { Navbar } from '@/components/navbar'
 import { Spotlight } from '@/components/ui/spotlight'
 import { SliderUI } from '@/components/ui/slider'
 import { WebsiteDesign } from '@/components/website-design'
+import { GraphicDesign } from '@/components/graphic-design'
 
 const HomePage = () => {
   return (
@@ -33,6 +34,7 @@ const HomePage = () => {
         <div className="w-full pt-20">
           <SliderUI />
           <WebsiteDesign />
+          <GraphicDesign />
         </div>
       </div>
     </div>
