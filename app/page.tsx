@@ -7,6 +7,7 @@ import { Spotlight } from '@/components/ui/spotlight'
 import { SliderUI } from '@/components/ui/slider'
 import { WebsiteDesign } from '@/components/website-design'
 import { GraphicDesign } from '@/components/graphic-design'
+import { ShopifyStores } from '@/components/shopify-stores'
 
 const HomePage = () => {
   return (
@@ -35,6 +36,7 @@ const HomePage = () => {
           <SliderUI />
           <WebsiteDesign />
           <GraphicDesign />
+          <ShopifyStores />
         </div>
       </div>
     </div>
