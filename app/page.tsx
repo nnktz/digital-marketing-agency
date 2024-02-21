@@ -1,11 +1,14 @@
+'use client'
+
 import Link from 'next/link'
 
 import { Navbar } from '@/components/navbar'
 import { Spotlight } from '@/components/ui/spotlight'
+import { SliderUI } from '@/components/ui/slider'
 
 const HomePage = () => {
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-black/[0.96] antialiased md:items-center md:justify-center">
+    <div className="relative w-full overflow-hidden bg-black/[0.96] antialiased md:items-center md:justify-center">
       <Navbar />
       <Spotlight className="left-80 hidden md:flex" fill="white" />
       <div className="relative z-10 mx-auto w-full p-4 px-2 pt-10 md:pt-32">
@@ -25,6 +28,10 @@ const HomePage = () => {
         >
           Book a call
         </Link>
+
+        <div className="w-full pt-20">
+          <SliderUI />
+        </div>
       </div>
     </div>
   )
