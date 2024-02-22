@@ -46,6 +46,7 @@ const HomePage = () => {
         scrollToGraphicDesign={scrollToGraphicDesign}
         scrollToShopifyStores={scrollToShopifyStores}
         scrollToWebsiteDesign={scrollToWebsiteDesign}
+        showItems
       />
 
       <Spotlight className="left-80 hidden md:flex" fill="white" />

@@ -12,6 +12,7 @@ interface NavbarProps {
   scrollToGraphicDesign?: () => void
   scrollToShopifyStores?: () => void
   scrollToBrands?: () => void
+  showItems?: boolean
 }
 
 export const Navbar = ({
@@ -19,6 +20,7 @@ export const Navbar = ({
   scrollToGraphicDesign,
   scrollToShopifyStores,
   scrollToWebsiteDesign,
+  showItems = false,
 }: NavbarProps) => {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false)
 
@@ -42,24 +44,26 @@ export const Navbar = ({
         />
       </Link>
 
-      <div className="hidden cursor-pointer items-center space-x-10 bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-slate-300 text-transparent md:flex">
-        <div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
-          Website Design
-        </div>
-        <div onClick={scrollToGraphicDesign} className="hover:text-gray-50">
-          Graphic Design
-        </div>
-        <div onClick={scrollToShopifyStores} className="hover:text-gray-50">
-          Shopify Stores
-        </div>
-        <div onClick={scrollToBrands} className="hover:text-gray-50">
-          Brands
-        </div>
+      {showItems && (
+        <div className="hidden cursor-pointer items-center space-x-10 bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-slate-300 text-transparent md:flex">
+          <div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
+            Website Design
+          </div>
+          <div onClick={scrollToGraphicDesign} className="hover:text-gray-50">
+            Graphic Design
+          </div>
+          <div onClick={scrollToShopifyStores} className="hover:text-gray-50">
+            Shopify Stores
+          </div>
+          <div onClick={scrollToBrands} className="hover:text-gray-50">
+            Brands
+          </div>
 
-        <Link href={'/pricing'} className="hover:text-gray-50">
-          Pricing
-        </Link>
-      </div>
+          <Link href={'/pricing'} className="hover:text-gray-50">
+            Pricing
+          </Link>
+        </div>
+      )}
 
       <div className="flex md:hidden">
         {isDropdownVisible ? (
