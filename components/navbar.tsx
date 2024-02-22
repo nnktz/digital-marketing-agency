@@ -7,7 +7,19 @@ import { AlignJustify, X } from 'lucide-react'
 
 import { DropdownMenu } from './dropdown-menu'
 
-export const Navbar = () => {
+interface NavbarProps {
+  scrollToWebsiteDesign: () => void
+  scrollToGraphicDesign: () => void
+  scrollToShopifyStores: () => void
+  scrollToBrands: () => void
+}
+
+export const Navbar = ({
+  scrollToBrands,
+  scrollToGraphicDesign,
+  scrollToShopifyStores,
+  scrollToWebsiteDesign,
+}: NavbarProps) => {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false)
 
   const toggleDropdown = () => {
@@ -31,10 +43,18 @@ export const Navbar = () => {
       </Link>
 
       <div className="hidden cursor-pointer items-center space-x-10 bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-slate-300 text-transparent md:flex">
-        <div className="hover:text-gray-50">Website design</div>
-        <div className="hover:text-gray-50">Graphic design</div>
-        <div className="hover:text-gray-50">Shopify design</div>
-        <div className="hover:text-gray-50">Brands</div>
+        <div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
+          Website Design
+        </div>
+        <div onClick={scrollToGraphicDesign} className="hover:text-gray-50">
+          Graphic Design
+        </div>
+        <div onClick={scrollToShopifyStores} className="hover:text-gray-50">
+          Shopify Stores
+        </div>
+        <div onClick={scrollToBrands} className="hover:text-gray-50">
+          Brands
+        </div>
 
         <Link href={'/pricing'} className="hover:text-gray-50">
           Pricing
@@ -61,7 +81,7 @@ export const Navbar = () => {
       <div className="ml-10 hidden md:flex">
         <Link
           href={'/contact'}
-          className="animate-shimmer inline-flex h-12 items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+          className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
         >
           Contact
         </Link>
