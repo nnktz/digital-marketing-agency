@@ -10,6 +10,7 @@ import { GraphicDesign } from '@/components/graphic-design'
 import { ShopifyStores } from '@/components/shopify-stores'
 import { Brands } from '@/components/brands'
 import { Services } from '@/components/services'
+import { Faq } from '@/components/faq'
 
 const HomePage = () => {
   return (
@@ -41,6 +42,7 @@ const HomePage = () => {
           <ShopifyStores />
           <Brands />
           <Services />
+          <Faq />
         </div>
       </div>
     </div>
