@@ -8,6 +8,7 @@ import { SliderUI } from '@/components/ui/slider'
 import { WebsiteDesign } from '@/components/website-design'
 import { GraphicDesign } from '@/components/graphic-design'
 import { ShopifyStores } from '@/components/shopify-stores'
+import { Brands } from '@/components/brands'
 
 const HomePage = () => {
   return (
@@ -37,6 +38,7 @@ const HomePage = () => {
           <WebsiteDesign />
           <GraphicDesign />
           <ShopifyStores />
+          <Brands />
         </div>
       </div>
     </div>
