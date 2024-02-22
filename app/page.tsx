@@ -9,6 +9,7 @@ import { WebsiteDesign } from '@/components/website-design'
 import { GraphicDesign } from '@/components/graphic-design'
 import { ShopifyStores } from '@/components/shopify-stores'
 import { Brands } from '@/components/brands'
+import { Services } from '@/components/services'
 
 const HomePage = () => {
   return (
@@ -39,6 +40,7 @@ const HomePage = () => {
           <GraphicDesign />
           <ShopifyStores />
           <Brands />
+          <Services />
         </div>
       </div>
     </div>
