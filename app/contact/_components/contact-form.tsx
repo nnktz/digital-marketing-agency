@@ -52,9 +52,10 @@ export const ContactForm = () => {
     },
   })
 
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    setLoading(true)
+  const handleSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
+      setLoading(true)
+
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -79,7 +80,7 @@ export const ContactForm = () => {
     <Form {...form}>
       {!submitted ? (
         <form
-          onSubmit={form.handleSubmit(onSubmit)}
+          onSubmit={form.handleSubmit(handleSubmit)}
           className="h-full space-y-4 rounded-3xl border p-10 md:w-1/3"
         >
           <div className="items-center gap-6 md:flex">
