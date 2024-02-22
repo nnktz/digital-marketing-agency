@@ -8,10 +8,10 @@ import { AlignJustify, X } from 'lucide-react'
 import { DropdownMenu } from './dropdown-menu'
 
 interface NavbarProps {
-  scrollToWebsiteDesign: () => void
-  scrollToGraphicDesign: () => void
-  scrollToShopifyStores: () => void
-  scrollToBrands: () => void
+  scrollToWebsiteDesign?: () => void
+  scrollToGraphicDesign?: () => void
+  scrollToShopifyStores?: () => void
+  scrollToBrands?: () => void
 }
 
 export const Navbar = ({
